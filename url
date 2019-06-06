@@ -84,3 +84,22 @@ class Work {
 
 $work = new \Office\Work;
 echo $work->getTask();
+
+
+
+https://laracasts.com
+https://laracasts.com/series/laravel-from-scratch-2018
+https://laracasts.com
+https://laracasts.com/series/laravel-from-scratch-2018
+
+
+FYI
+
+IN Laravel 5.8
+
+
+{{{ $htmlCode }}}
+
+
+is replaced by {{ e($htmlCode) }}
+
