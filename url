@@ -1,0 +1,86 @@
+https://github.com/spatie/opening-hours
+
+https://www.loom.com/share/4e0674aae785490daa61075dc190e87a
+http://blog.mallow-tech.com/2016/06/request-life-cycle-of-laravel/
+https://jagroop.github.io/#/notes/php/multiple-versions
+
+
+
+<?php
+
+class User {
+  const DEFAULT_USER_NAME = 'JOHN';
+  
+  private $name;
+
+  public function getNameOfTheUser()
+  {
+      return $this->name;
+  }
+
+  public function setNameOfTheUser($name)
+  {
+      $this->name = $name;
+  }
+
+}
+
+
+$user = new User;
+$user->setNameOfTheUser('Avantika');
+echo $user->getNameOfTheUser();
+
+
+
+<?php
+
+class User {
+
+  public function __construct()
+  {
+      echo __CLASS__ . " Constructor called \n";
+  }
+
+  public function getNameOfTheUser()
+  {
+      return $this->name;
+  }
+
+  public function setNameOfTheUser($name)
+  {
+      $this->name = $name;
+  }
+
+  public function __destruct()
+  {
+      echo __CLASS__ . " Destructor called \n";
+  }
+
+}
+
+
+$user = new User;
+$user->setNameOfTheUser('Avantika');
+echo $user->getNameOfTheUser() . "\n";
+
+
+
+<?php
+namespace Home;
+class Work {
+  public function getTask()
+  {
+      return 'Goto store and buy cookies';
+  }
+}
+
+namespace Office;
+class Work {
+  public function getTask()
+  {
+      return 'Work on PHP project';
+  }
+}
+
+$work = new \Office\Work;
+echo $work->getTask();
